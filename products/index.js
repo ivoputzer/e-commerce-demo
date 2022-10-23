@@ -1,3 +1,5 @@
+const {faker} = require('faker')
+
 function createProductFragment() {
   const fragment = document.createDocumentFragment()
 
@@ -6,7 +8,11 @@ function createProductFragment() {
 
   const ul = document.createElement('ul')
 
-  ;['Chair', 'Table', 'Lamp'].forEach(product => {
+  ;[
+    faker.commerce.product(),
+    faker.commerce.product(),
+    faker.commerce.product()
+  ].forEach(product => {
     const li = document.createElement('li')
     li.innerText = product
     ul.appendChild(li)
