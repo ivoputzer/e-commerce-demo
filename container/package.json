@@ -14,9 +14,5 @@
     "parcel": "^2.6.2",
     "products": "file:../products"
   },
-  "browserslist": [
-    "> 0.5%",
-    "last 2 versions",
-    "not dead"
-  ]
+  "browserslist": "> 0.5%, last 2 versions, not dead"
 }
