@@ -10,7 +10,8 @@ describe('cart', () =>{
 	it('should invoke createFragmentCart', ()=>{
 		const jdom = new JSDOM();
 		const fragment = createCartFragment(jdom.window.document);
-		ok(fragment instanceof jdom.window.DocumentFragment);
+		ok(fragment.querySelector("h2"));
+		//ok(fragment instanceof jdom.window.DocumentFragment);
 	})
 
 })
