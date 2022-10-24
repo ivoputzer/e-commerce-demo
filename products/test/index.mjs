@@ -1,5 +1,5 @@
-import {equal, ok} from 'assert'
-import {JSDOM} from 'jsdom'
+import { equal, ok } from 'assert'
+import { JSDOM } from 'jsdom'
 import sinon from 'sinon'
 
 import createProductFragment from '../index.mjs'
@@ -12,8 +12,8 @@ describe('products', () => {
     it('does invoke functions properly', () => {
       const appendChild = sinon.spy()
       const document = {
-        createDocumentFragment: sinon.stub().returns({appendChild}),
-        createElement: sinon.stub().returns({appendChild})
+        createDocumentFragment: sinon.stub().returns({ appendChild }),
+        createElement: sinon.stub().returns({ appendChild })
       }
 
       createProductFragment(document)

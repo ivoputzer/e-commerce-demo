@@ -1,6 +1,6 @@
-import {faker} from '@faker-js/faker'
+import { faker } from '@faker-js/faker'
 
-export default function createProductFragment(document = document) {
+export default function createProductFragment (document = document) {
   const fragment = document.createDocumentFragment()
 
   const h2 = document.createElement('h2')
