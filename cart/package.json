@@ -5,6 +5,7 @@
   "main": "dist/index.mjs",
   "source": "index.mjs",
   "scripts": {
+    "start": "parcel index.html -p 4322",
     "test": "mocha test/**",
     "build": "rm -rf dist; parcel build",
     "standard": "standard"

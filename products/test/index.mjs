@@ -31,5 +31,13 @@ describe('products', () => {
 
       ok(fragment instanceof dom.window.DocumentFragment)
     })
+
+    it('returns a document fragment with markup', () => {
+      const dom = new JSDOM()
+      const fragment = createProductFragment(dom.window.document)
+
+      const h2 = fragment.querySelector('h2')
+      equal(h2.innerText, 'Products for sale')
+    })
   })
 })

@@ -3,20 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>E-Commerce</title>
-  <!-- <script src="load.js"></script> -->
+</head>
 <body>
   <h1>E-Commerce</h1>
   <div id="products"></div>
-  <hr>
-  <div id="cart"></div>
-
-  <script type="module">
+  <script type="module" async>
     import createProductFragment from 'products'
-    import createCartFragment from 'cart'
-
     const products = document.getElementById('products')
     products.appendChild(createProductFragment())
-
+  </script>
+  <hr>
+  <div id="cart"></div>
+  <script type="module" async>
+    import createCartFragment from 'cart'
     const cart = document.getElementById('cart')
     cart.appendChild(createCartFragment())
   </script>

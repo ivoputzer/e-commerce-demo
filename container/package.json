@@ -2,9 +2,9 @@
   "name": "e-commerce",
   "version": "1.0.0",
   "description": "e-commerce dummuy",
-  "main": "index.js",
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "author": "Ivo von Putzer Reibegg <ivo.putzer@gmail.com> (https://github.com/ivoputzer)",
   "license": "MIT",
