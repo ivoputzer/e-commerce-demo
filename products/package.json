@@ -5,7 +5,7 @@
   "main": "dist/index.mjs",
   "source": "index.mjs",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha test/**",
     "build": "rm -rf dist; parcel build"
   },
   "author": "Ivo von Putzer Reibegg <ivo.putzer@gmail.com> (https://github.com/ivoputzer)",
@@ -15,7 +15,8 @@
   },
   "devDependencies": {
     "mocha": "^10.1.0",
-    "parcel": "^2.7.0"
+    "parcel": "^2.7.0",
+    "sinon": "^14.0.1"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead"
 }
