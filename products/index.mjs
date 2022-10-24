@@ -1,6 +1,6 @@
-const {faker} = require('faker')
+import {faker} from '@faker-js/faker'
 
-function createProductFragment() {
+export default function createProductFragment() {
   const fragment = document.createDocumentFragment()
 
   const h2 = document.createElement('h2')

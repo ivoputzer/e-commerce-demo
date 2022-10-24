@@ -11,9 +11,10 @@
   <div id="cart"></div>
 
   <script src="./node_modules/cart/index.js"></script>
-  <script src="./node_modules/products/index.js"></script>
 
-  <script>
+  <script type="module">
+    import createProductFragment from 'products'
+
     const products = document.getElementById('products')
     products.appendChild(createProductFragment())
 

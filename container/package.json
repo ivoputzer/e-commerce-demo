@@ -9,14 +9,15 @@
   "author": "Ivo von Putzer Reibegg <ivo.putzer@gmail.com> (https://github.com/ivoputzer)",
   "license": "MIT",
   "dependencies": {
-    "@faker-js/faker": "^7.6.0",
     "cart": "file:../cart",
-    "parcel": "^2.6.2",
     "products": "file:../products"
   },
   "browserslist": [
     "> 0.5%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  }
 }
