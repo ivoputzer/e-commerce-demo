@@ -4,8 +4,30 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha",
+    "standard": "standard"
   },
   "author": "Ivo von Putzer Reibegg <ivo.putzer@gmail.com> (https://github.com/ivoputzer)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0"
+  },
+  "devDependencies": {
+    "jsdom": "^20.0.1",
+    "mocha": "^10.1.0",
+    "parcel": "^2.7.0",
+    "sinon": "^14.0.1",
+    "standard": "^17.0.0"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "standard": {
+    "ignore": [
+      "dist/"
+    ],
+    "globals": [
+      "describe",
+      "it",
+      "document"
+    ]
+  }
 }
