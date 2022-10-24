@@ -28,7 +28,8 @@
     ],
     "globals": [
       "describe",
-      "it"
+      "it",
+      "document"
     ]
   }
 }
