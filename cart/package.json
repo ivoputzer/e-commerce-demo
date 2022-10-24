@@ -2,10 +2,32 @@
   "name": "cart",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.mjs",
+  "source": "index.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/**",
+    "build": "rm -rf dist; parcel build",
+    "standard": "standard --fix"
   },
   "author": "Ivo von Putzer Reibegg <ivo.putzer@gmail.com> (https://github.com/ivoputzer)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0"
+  },
+  "devDependencies": {
+    "jsdom": "^20.0.1",
+    "mocha": "^10.1.0",
+    "parcel": "^2.7.0",
+    "parser": "^0.1.4",
+    "standard": "^17.0.0"
+  },
+  "standard": {
+    "ignore": [
+      "dist/"
+    ],
+    "globals": [
+      "describe",
+      "it"
+    ]
+  }
 }
