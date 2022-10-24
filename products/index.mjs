@@ -1,20 +1,19 @@
 import {faker} from '@faker-js/faker'
 
-export default function createProductFragment({createDocumentFragment, createElement} = document) {
+export default function createProductFragment(document = document) {
+  const fragment = document.createDocumentFragment()
 
-  const fragment = createDocumentFragment()
-
-  const h2 = createElement('h2')
+  const h2 = document.createElement('h2')
   h2.innerText = 'Products for sale'
 
-  const ul = createElement('ul')
+  const ul = document.createElement('ul')
 
   ;[
     faker.commerce.product(),
     faker.commerce.product(),
     faker.commerce.product()
   ].forEach(product => {
-    const li = createElement('li')
+    const li = document.createElement('li')
     li.innerText = product
     ul.appendChild(li)
   })

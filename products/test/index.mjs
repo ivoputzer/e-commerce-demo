@@ -1,4 +1,5 @@
 import {equal, ok} from 'assert'
+import {JSDOM} from 'jsdom'
 import sinon from 'sinon'
 
 import createProductFragment from '../index.mjs'
@@ -22,6 +23,13 @@ describe('products', () => {
       ok(document.createElement.calledWith('ul'))
       ok(document.createElement.calledWith('li'))
       equal(appendChild.callCount, 5)
+    })
+
+    it('returns a document fragment', () => {
+      const dom = new JSDOM()
+      const fragment = createProductFragment(dom.window.document)
+
+      ok(fragment instanceof dom.window.DocumentFragment)
     })
   })
 })
