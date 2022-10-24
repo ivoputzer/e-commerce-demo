@@ -10,10 +10,10 @@
   <hr>
   <div id="cart"></div>
 
-  <script src="./node_modules/cart/index.js"></script>
 
   <script type="module">
     import createProductFragment from 'products'
+    import createCartFragment from 'cart'
 
     const products = document.getElementById('products')
     products.appendChild(createProductFragment())
