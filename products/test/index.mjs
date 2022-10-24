@@ -4,7 +4,7 @@ import sinon from 'sinon'
 
 import createProductFragment from '../index.mjs'
 
-describe('cart', () => {
+describe('products', () => {
   it('exports a function', () => {
     equal(typeof createProductFragment, 'function')
   })
