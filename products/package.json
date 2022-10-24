@@ -5,8 +5,9 @@
   "main": "dist/index.mjs",
   "source": "index.mjs",
   "scripts": {
-    "test": "mocha test/**",
+    "start": "parcel index.html",
     "build": "rm -rf dist; parcel build",
+    "test": "mocha test/**",
     "standard": "standard"
   },
   "author": "Ivo von Putzer Reibegg <ivo.putzer@gmail.com> (https://github.com/ivoputzer)",
