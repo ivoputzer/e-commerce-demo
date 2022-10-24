@@ -1,4 +1,6 @@
-function createCartFragment () {
+import { faker } from '@faker-js/faker'
+
+export default function createCartFragment () {
   const fragment = document.createDocumentFragment()
   const randomCartNumber = Math.random()
 
@@ -6,7 +8,8 @@ function createCartFragment () {
   h2.innerText = 'Cart'
 
   const p = document.createElement('p')
-  p.innerText = `You have ${randomCartNumber} item in your cart`
+
+  p.innerText = `${faker.name.firstName()} have ${randomCartNumber} item in your cart`
 
   fragment.appendChild(h2)
   fragment.appendChild(p)
