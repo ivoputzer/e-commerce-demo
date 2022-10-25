@@ -7,5 +7,6 @@ jobs:
   fixme:
     runs-on: ubuntu-latest
     steps:
+      - run: ls -ls
       - uses: actions/checkout@v3
       - run: ls -ls
