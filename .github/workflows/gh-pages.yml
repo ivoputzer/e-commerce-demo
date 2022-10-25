@@ -36,6 +36,16 @@ jobs:
       - name: Creating npm package
         run: npm run build
         working-directory: ./cart
+      - name: Archive cart npm package
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist-cart
+          path: ./cart
+      # - name: Archive code coverage results
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: code-coverage-report
+      #     path: output/test/code-coverage.html
 
   products:
     runs-on: ubuntu-latest
@@ -50,6 +60,11 @@ jobs:
       - name: Creating npm package
         run: npm run build
         working-directory: ./products
+      - name: Archive products npm package
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist-products
+          path: ./products
 
   container:
     environment:
