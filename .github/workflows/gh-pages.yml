@@ -16,6 +16,6 @@ jobs:
       - run: (cd cart; npm test)
       - run: (cd products; npm test)
       # build
-      - run: (cd container; npm build)
+      - run: (cd container; npm run build)
 
 
