@@ -8,6 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      # install
       - run: (cd cart; npm ci)
       - run: (cd products; npm ci)
       - run: (cd container; npm ci)
+      # test
+      - run: (cd cart; npm test)
+      - run: (cd products; npm test)
+
+
