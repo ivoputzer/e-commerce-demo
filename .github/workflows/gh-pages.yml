@@ -22,21 +22,29 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  fixme:
+
+  cart:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: (cd cart; npm ci)
+      - run: (cd cart; npm test)
+
+  products:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: (cd products; npm ci)
+      - run: (cd products; npm test)
+
+  container:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      # install
-      - run: (cd cart; npm ci)
-      - run: (cd products; npm ci)
       - run: (cd container; npm ci)
-      # test
-      - run: (cd cart; npm test)
-      - run: (cd products; npm test)
-      # build
       - run: (cd container; npm run build)
 
       - name: Setup Pages
