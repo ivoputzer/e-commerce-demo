@@ -93,13 +93,13 @@ jobs:
         run: ls -R
         working-directory: products
 
-      # - name: Installing npm dependencies
-      #   run: npm ci
-      #   working-directory: ./cart
+      - name: Installing npm dependencies
+        run: npm ci
+        working-directory: ./cart
 
-      # - name: Installing npm dependencies
-      #   run: npm ci
-      #   working-directory: ./products
+      - name: Installing npm dependencies
+        run: npm ci
+        working-directory: ./products
 
       - name: Installing npm dependencies
         run: npm ci
