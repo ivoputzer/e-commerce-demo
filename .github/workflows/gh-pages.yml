@@ -27,15 +27,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: (cd cart; npm ci)
-      - run: (cd cart; npm test)
+      - run: cd cart
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
 
   products:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: (cd products; npm ci)
-      - run: (cd products; npm test)
+      - run: cd products
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
 
   container:
     environment:

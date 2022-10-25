@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.mjs",
+  "targets": {
+    "main": {
+      "includeNodeModules": true
+    }
+  },
   "source": "index.mjs",
   "scripts": {
     "start": "parcel index.html -p 4321",
