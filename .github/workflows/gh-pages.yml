@@ -7,6 +7,7 @@ jobs:
   fixme:
     runs-on: ubuntu-latest
     steps:
-      - run: ls -ls
       - uses: actions/checkout@v3
-      - run: ls -ls
+      - run: (cd cart; npm ci)
+      - run: (cd products; npm ci)
+      - run: (cd container; npm ci)
