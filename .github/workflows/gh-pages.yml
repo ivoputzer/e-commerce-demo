@@ -78,7 +78,7 @@ jobs:
       - products
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: https://ivoputzer.github.io/mfe-ecommerce-demo-parcel
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
