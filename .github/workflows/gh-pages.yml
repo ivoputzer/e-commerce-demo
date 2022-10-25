@@ -44,11 +44,6 @@ jobs:
             cart/dist
             cart/package.json
             cart/package-lock.json
-      # - name: Archive code coverage results
-      #   uses: actions/upload-artifact@v3
-      #   with:
-      #     name: code-coverage-report
-      #     path: output/test/code-coverage.html
 
   products:
     runs-on: ubuntu-latest
@@ -82,9 +77,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: (cd container; npm ci)
-      - run: (cd container; npm run build)
-
+      - name: Download dist-cart
+        uses: actions/download-artifact@v3
+        with:
+          name: dist-cart
+      - name: Download dist-products
+        uses: actions/download-artifact@v3
+        with:
+          name: dist-products
+      - name: Installing npm dependencies
+        run: npm ci
+        working-directory: ./container
+      - name: Creating asset bundle
+        run: npm run build
+        working-directory: ./container
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
