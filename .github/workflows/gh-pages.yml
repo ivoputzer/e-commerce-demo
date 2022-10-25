@@ -17,5 +17,7 @@ jobs:
       - run: (cd products; npm test)
       # build
       - run: (cd container; npm run build)
+      # show built assets
+      - run: ls -lsah ./dist
 
 
