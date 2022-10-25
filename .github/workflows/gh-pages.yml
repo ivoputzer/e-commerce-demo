@@ -41,9 +41,11 @@ jobs:
         with:
           name: dist-cart
           path: |
-            cart/dist
-            cart/package.json
-            cart/package-lock.json
+            cart
+            !cart/node_modules
+            !cart/test
+            !cart/index.html
+            !cart/.parcel-cache
 
   products:
     runs-on: ubuntu-latest
@@ -63,9 +65,11 @@ jobs:
         with:
           name: dist-products
           path: |
-            products/dist
-            products/package.json
-            products/package-lock.json
+            products
+            !products/node_modules
+            !products/test
+            !products/index.html
+            !products/.parcel-cache
 
   container:
     needs:
