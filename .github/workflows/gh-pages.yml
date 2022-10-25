@@ -40,7 +40,10 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: dist-cart
-          path: ./cart
+          path: |
+            cart/dist
+            cart/package.json
+            cart/package-lock.json
       # - name: Archive code coverage results
       #   uses: actions/upload-artifact@v3
       #   with:
@@ -64,9 +67,15 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: dist-products
-          path: ./products
+          path: |
+            products/dist
+            products/package.json
+            products/package-lock.json
 
   container:
+    needs:
+      - cart
+      - products
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
