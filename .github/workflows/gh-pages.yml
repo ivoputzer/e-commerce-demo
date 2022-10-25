@@ -88,6 +88,7 @@ jobs:
 
       - run: ls -lsah cart
       - run: ls -lsah products
+      - run: ls -R .
 
       - name: Installing npm dependencies
         run: npm ci
