@@ -18,6 +18,6 @@ jobs:
       # build
       - run: (cd container; npm run build)
       # show built assets
-      - run: ls -lsah ./dist
+      - run: ls -lsah ./container/dist
 
 
