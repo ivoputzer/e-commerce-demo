@@ -85,6 +85,10 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: dist-products
+
+      - run: ls -lsah cart
+      - run: ls -lsah products
+
       - name: Installing npm dependencies
         run: npm ci
         working-directory: ./container
