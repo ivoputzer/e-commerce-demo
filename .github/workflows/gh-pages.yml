@@ -41,11 +41,7 @@ jobs:
         with:
           name: dist-cart
           path: |
-            cart
-            !cart/node_modules
-            !cart/test
-            !cart/index.html
-            !cart/.parcel-cache
+            cart/dist
 
   products:
     runs-on: ubuntu-latest
@@ -65,11 +61,7 @@ jobs:
         with:
           name: dist-products
           path: |
-            products
-            !products/node_modules
-            !products/test
-            !products/index.html
-            !products/.parcel-cache
+            products/dist
 
   container:
     needs:
@@ -85,14 +77,21 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: dist-cart
+          path: cart/dist
+
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: cart
+
       - name: Download dist-products
         uses: actions/download-artifact@v3
         with:
           name: dist-products
+          path: products/dist
 
-      - run: ls -lsah cart
-      - run: ls -lsah products
-      - run: ls -R .
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: products
 
       - name: Installing npm dependencies
         run: npm ci
